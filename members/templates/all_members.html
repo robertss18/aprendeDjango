@@ -1,0 +1,18 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Medical Application - List of all members
+{% endblock %}
+
+
+{% block content %}
+  <h1>Members</h1>
+  
+  <p><a href="/">HOME</a></p>
+
+  <ul>
+    {% for x in mymembers %}
+      <li><a href="details/{{ x.id }}">{{ x.nombre }} {{ x.apellido }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}
